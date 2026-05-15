@@ -1,19 +1,29 @@
 name: Sync to Hugging Face Hub
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           lfs: true
+
       - name: Install Hugging Face CLI
         run: pip install -U "huggingface_hub[cli]"
+
       - name: Push to hub without datasets
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: hf upload bilalsaeed5439/Dog-Classifier . . --repo-type space --exclude "train/*" "test/*" --token $HF_TOKEN
+        run: |
+          huggingface-cli upload bilalsaeed5439/Dog-Classifier . . \
+            --repo-type space \
+            --exclude "train/*" \
+            --exclude "test/*" \
+            --token $HF_TOKEN
