@@ -6,6 +6,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from PIL import Image
 import tensorflow as tf
+from flask import send_from_directory
+
 
 # 1. Initialize the Flask App
 app = Flask(__name__)
@@ -46,6 +48,10 @@ def prepare_image(image, target_size=(224, 224)):
     return img_array
 
 # 4. Create the API Route
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
@@ -85,4 +91,4 @@ def predict():
 
 # 5. Start the server
 if __name__ == '__main__':
-   app.run(host="0.0.0.0", port=7860)
+   app.run(debug=True, host='0.0.0.0', port=7860)
