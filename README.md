@@ -7,10 +7,21 @@ A full-stack AI-powered web application that identifies dog breeds from uploaded
 
 ---
 
+## 👤 Author
+
+**Tawsif Mayaz**  
+Computer Engineering student at the University of Waterloo | Self-taught Developer  
+
+[![GitHub](https://img.shields.io/badge/GitHub-tawsifrm-181717?style=flat&logo=github)](https://github.com/tawsifrm)
+[![Portfolio](https://img.shields.io/badge/Portfolio-tawsifrm.netlify.app-orange?style=flat&logo=netlify)](https://tawsifrm.netlify.app/)
+[![Email](https://img.shields.io/badge/Email-tawsifmayaz@gmail.com-red?style=flat&logo=gmail)](mailto:tawsifmayaz@gmail.com)
+
+---
+
 ## 🌐 Live Demo
 
 - **Hugging Face Deployment:** `[Your Hugging Face Space Link Here]`
-- **GitHub Repository:** `[Your GitHub Repo Link Here]`
+- **GitHub Repository:** [github.com/tawsifrm](https://github.com/tawsifrm)
 
 ---
 
@@ -73,7 +84,7 @@ Dog-Breed-Identifier/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Dog-Breed-Identifier.git
+git clone https://github.com/tawsifrm/Dog-Breed-Identifier.git
 cd Dog-Breed-Identifier
 ```
 
