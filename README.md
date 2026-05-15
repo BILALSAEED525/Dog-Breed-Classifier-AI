@@ -1,3 +1,12 @@
+---
+title: Dog Classifier
+emoji: 🐶
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+---
+
 # 🐶 Dog Breed Identifier
 
 A full-stack AI-powered web application that identifies dog breeds from uploaded images using a fine-tuned **ResNet50V2** deep learning model.
@@ -10,7 +19,7 @@ A full-stack AI-powered web application that identifies dog breeds from uploaded
 ## 👤 Author
 
 **Tawsif Mayaz**  
-Computer Engineering student at the University of Waterloo | Self-taught Developer  
+Computer Engineering student at the University of Waterloo | Self-taught Developer
 
 [![GitHub](https://img.shields.io/badge/GitHub-tawsifrm-181717?style=flat&logo=github)](https://github.com/tawsifrm)
 [![Portfolio](https://img.shields.io/badge/Portfolio-tawsifrm.netlify.app-orange?style=flat&logo=netlify)](https://tawsifrm.netlify.app/)
@@ -67,15 +76,15 @@ Dog-Breed-Identifier/
 
 ## ⚙️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | HTML5, Tailwind CSS (CDN), Vanilla JavaScript |
-| **Backend** | Python, Flask, Flask-CORS |
-| **AI Model** | TensorFlow 2.x, Keras, ResNet50V2 |
-| **Image Processing** | Pillow (PIL), NumPy |
-| **Data Handling** | Pandas |
-| **Concurrency** | Python `threading` module |
-| **Testing** | Python `unittest`, Postman |
+| Layer                | Technology                                    |
+| -------------------- | --------------------------------------------- |
+| **Frontend**         | HTML5, Tailwind CSS (CDN), Vanilla JavaScript |
+| **Backend**          | Python, Flask, Flask-CORS                     |
+| **AI Model**         | TensorFlow 2.x, Keras, ResNet50V2             |
+| **Image Processing** | Pillow (PIL), NumPy                           |
+| **Data Handling**    | Pandas                                        |
+| **Concurrency**      | Python `threading` module                     |
+| **Testing**          | Python `unittest`, Postman                    |
 
 ---
 
@@ -101,6 +110,7 @@ python app.py
 ```
 
 Wait until you see:
+
 ```
 Loading model...
 Loaded 120 breeds successfully.
@@ -126,12 +136,14 @@ Double-click `index.html` to open it in your browser (Chrome or Edge recommended
 Sends a dog image to the model and returns the predicted breed.
 
 **Request:**
+
 - Method: `POST`
 - Body: `form-data`
 - Key: `file` (type: File)
 - Value: A JPG, PNG, or WEBP image of a dog
 
 **Successful Response:**
+
 ```json
 {
   "success": true,
@@ -140,6 +152,7 @@ Sends a dog image to the model and returns the predicted breed.
 ```
 
 **Error Response:**
+
 ```json
 {
   "error": "No file uploaded"
@@ -168,12 +181,12 @@ python testing.py
 
 The test suite covers:
 
-| Test | Description |
-|---|---|
-| `test_image_preprocessing_shape` | Verifies output is (1, 224, 224, 3) |
-| `test_rgba_conversion` | Ensures 4-channel PNG images are converted to 3-channel RGB |
-| `test_extreme_dimensions` | Ensures panoramic or vertical images are correctly resized to 224×224 |
-| `test_preprocessing_values` | Verifies pixel values are normalized (not raw 0–255) |
+| Test                             | Description                                                           |
+| -------------------------------- | --------------------------------------------------------------------- |
+| `test_image_preprocessing_shape` | Verifies output is (1, 224, 224, 3)                                   |
+| `test_rgba_conversion`           | Ensures 4-channel PNG images are converted to 3-channel RGB           |
+| `test_extreme_dimensions`        | Ensures panoramic or vertical images are correctly resized to 224×224 |
+| `test_preprocessing_values`      | Verifies pixel values are normalized (not raw 0–255)                  |
 
 ---
 
