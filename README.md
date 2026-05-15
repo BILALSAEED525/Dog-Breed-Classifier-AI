@@ -29,8 +29,8 @@ Computer Engineering student at the University of Waterloo | Self-taught Develop
 
 ## 🌐 Live Demo
 
-- **Hugging Face Deployment:** `[Your Hugging Face Space Link Here]`
-- **GitHub Repository:** [github.com/tawsifrm](https://github.com/tawsifrm)
+- **Hugging Face Deployment:** `[https://huggingface.co/spaces/bilalsaeed5439/Dog-Classifier]`
+- **GitHub Repository:** [https://github.com/BILALSAEED525](https://github.com/BILALSAEED525/Dog-Breed-Classifier-AI)
 
 ---
 
